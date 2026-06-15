@@ -5,8 +5,8 @@ services:
     environment:
       VERSION: "11l"
       DISK_SIZE: "128G"
-      RAM_SIZE: "8G"
-      CPU_CORES: "4"
+      RAM_SIZE: "16G"
+      CPU_CORES: "8"
     devices:
       - /dev/kvm
       - /dev/net/tun
