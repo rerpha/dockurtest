@@ -3,7 +3,10 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "11"
+      # This is a direct link to the evaluation image of Windows Server 2025.
+      # if this expires, go to https://www.microsoft.com/en-gb/evalcenter/download-windows-server-2025 , 
+      # copy the link to the english version, and use `curl -L -I <url>` to find the actual iso download link
+      VERSION: "https://software-static.download.prss.microsoft.com/dbazure/998969d5-f34g-4e03-ac9d-1f9786c66749/26100.32230.260111-0550.lt_release_svc_refresh_SERVER_EVAL_x64FRE_en-us.iso"
       DISK_SIZE: "128G"
       RAM_SIZE: "16G"
       CPU_CORES: "8"
@@ -22,4 +25,3 @@ services:
       - ./example:/oem
     restart: always
     stop_grace_period: 2m
-

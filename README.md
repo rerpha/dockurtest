@@ -8,3 +8,5 @@ My findings are that it's very easy. However:
 2. without setting up macvlans etc. this binds to localhost ports, so you need to use `ssh Docker@localhost` to use it. for this reason, i've mapped port 2222 to the dockur container's port 22 for ssh. 
 3. it takes ~10 minutes to reinstall from scratch. to force this, remove `/tmp/windows/*` which is where the volume for the container is mounted. 
 
+To stay within [licensing agreements](https://www.microsoft.com/content/dam/microsoft/usetm/documents/windows-server/2025-datacenter-and-standard/oem/UseTerms_OEM_WindowsServer2025_DatacenterAndStandard_English.pdf) (See "evaluation") we are using the evaluation image rather than dockur-provided images. 
+
