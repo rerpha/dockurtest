@@ -11,4 +11,15 @@ My findings are that it's very easy. However:
 To stay within [licensing agreements](https://www.microsoft.com/content/dam/microsoft/usetm/documents/windows-server/2025-datacenter-and-standard/oem/UseTerms_OEM_WindowsServer2025_DatacenterAndStandard_English.pdf) (See "evaluation") we are using the evaluation image rather than dockur-provided images. 
 
 
-using this in ansible is a case of adding localhost to the inventory with `ansible_port: 2222`, `ansible_user: Docker`, `ansible_pass: admin` (the [defaults for dockur](https://github.com/dockur/windows#how-do-i-configure-the-username-and-password))
+using this in ansible is a case of adding localhost to the inventory with the following in your inventory, using `--ask-pass` and providing the [default password for dockur](https://github.com/dockur/windows#how-do-i-configure-the-username-and-password)
+```yaml
+---
+local:
+  hosts:
+    localhost
+  vars:
+    ansible_port: 2222
+    ansible_user: Docker
+    ansible_shell_type: cmd
+
+```
