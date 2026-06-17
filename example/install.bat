@@ -1,1 +1,1 @@
-powershell -executionpolicy bypass -File .\install.ps1
+powershell -executionpolicy bypass -File c:\oem\install.ps1
