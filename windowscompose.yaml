@@ -22,6 +22,6 @@ services:
       - 2222:22
     volumes:
       - /tmp/windows:/storage
-      - ./example:/oem
+      - ./install:/oem
     restart: always
     stop_grace_period: 2m
