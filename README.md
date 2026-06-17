@@ -1,6 +1,6 @@
 # dockurtest
 
-This is a test to see how easy it is to spin up a windows 11 VM for testing ansible playbooks etc. 
+This is a test to see how easy it is to spin up a windows server 2025 VM for testing ansible playbooks etc. 
 
 My findings are that it's very easy. However: 
 
